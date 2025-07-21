@@ -5,7 +5,7 @@ pipeline {
         stage('Docker Build Image'){
             steps{
                 script{
-                    sh 'docker build -t abdoukasse/app-abdou-kasse:v1 .'
+                    sh 'docker build -t kasse:v1 .'
                 }
             }
 
