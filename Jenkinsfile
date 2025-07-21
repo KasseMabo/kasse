@@ -5,7 +5,7 @@ pipeline {
         stage('Build'){
             steps{
                 script{
-                    sh 'Hello UADB'
+                    sh 'echo "Hello UADB"'
                 }
             }
 
