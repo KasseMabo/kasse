@@ -10,6 +10,15 @@ pipeline {
             }
 
         }
+
+        stage('Docker tag image') {
+            steps {
+                script {
+                    sh 'docker tag kasse:v1 abdoukasse/kasse:v1'
+                    sh 'docker images'
+                }
+            }
+        }
     }
 
     // environment {
@@ -33,14 +42,7 @@ pipeline {
         //     }
         // }
 
-        stage('Docker tag image') {
-            steps {
-                script {
-                    sh 'docker tag kasse:v1 abdoukasse/kasse:v1'
-                    sh 'docker images'
-                }
-            }
-        }
+        
 
         // stage('Docker push image') {
         //     steps {
