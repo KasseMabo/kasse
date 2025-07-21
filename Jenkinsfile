@@ -2,10 +2,10 @@ pipeline {
     agent {label 'docker'}
 
     stages{
-        stage('Build'){
+        stage('Docker Build Image'){
             steps{
                 script{
-                    sh 'echo "Hello UADB"'
+                    sh 'docker build -t abdoukasse/app-abdou-kasse:v1 .'
                 }
             }
 
