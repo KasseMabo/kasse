@@ -1,18 +1,29 @@
 pipeline {
     agent {label 'docker'}
 
-    environment {
-        DOCKER_PASSWORD=credentials('DOCKER_PASSWORD')
-    }
-
-    stages {
-        stage('Docker login') {
-            steps {
-                script {
-                    sh 'echo $DOCKER_PASSWORD | docker login -u abdoukasse --password-stdin'
+    stages{
+        stage('Build'){
+            steps{
+                script{
+                    sh 'Hello UADB'
                 }
             }
+
         }
+    }
+
+    // environment {
+    //     DOCKER_PASSWORD=credentials('DOCKER_PASSWORD')
+    // }
+
+    // stages {
+    //     stage('Docker login') {
+    //         steps {
+    //             script {
+    //                 sh 'echo $DOCKER_PASSWORD | docker login -u abdoukasse --password-stdin'
+    //             }
+    //         }
+    //     }
 
         // stage('Docker build image') {
         //     steps {
@@ -37,5 +48,4 @@ pipeline {
         //         }
         //     }
         // }
-    }
 }
