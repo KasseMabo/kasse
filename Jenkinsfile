@@ -19,6 +19,14 @@ pipeline {
                 }
             }
         }
+
+        stage('Docker push image') {
+            steps {
+                script {
+                    sh 'docker push abdoukasse/kasse:v1'
+                }
+            }
+        }
     }
 
     // environment {
@@ -44,11 +52,5 @@ pipeline {
 
         
 
-        // stage('Docker push image') {
-        //     steps {
-        //         script {
-        //             sh 'docker push YourUSername/uadb:v1'
-        //         }
-        //     }
-        // }
+        
 }
