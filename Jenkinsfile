@@ -33,13 +33,14 @@ pipeline {
         //     }
         // }
 
-        // stage('Docker tag image') {
-        //     steps {
-        //         script {
-        //             sh 'docker tag uadb:v1 YourUSername/uadb:v1'
-        //         }
-        //     }
-        // }
+        stage('Docker tag image') {
+            steps {
+                script {
+                    sh 'docker tag kasse:v1 abdoukasse/kasse:v1'
+                    sh 'docker images'
+                }
+            }
+        }
 
         // stage('Docker push image') {
         //     steps {
